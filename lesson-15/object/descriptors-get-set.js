@@ -17,12 +17,12 @@ var user = {
 };
 
 Object.defineProperty(user, "fullName", {
-  get: function() {
+  get() {
     return this.firstName + ' ' + this.secondName;
   }
 });
 
-user.name = ' Oleg ';
+user.name = ' Oleg    ';
 
 console.log('Setter for name: ', user.firstName);
 console.log('Getter for name: ', user.fullName);

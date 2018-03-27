@@ -1,5 +1,3 @@
-const fp = _;
-
 class SuperPokemon {
   attack(){
     return {
@@ -25,6 +23,7 @@ class SuperPokemon {
 }
 
 class Pokemon extends SuperPokemon {
+
   constructor({ features, state }){
     super();
 
@@ -34,7 +33,7 @@ class Pokemon extends SuperPokemon {
 
   static getDefaultType(type) {
     if (!Pokemon.featuresTypesList.includes(type)) {
-      return 'mixed'
+      return 'there is no such type';
     }
   }
 
@@ -60,7 +59,7 @@ Pokemon.featuresTypesList = ['water', 'fire', 'earth'];
 const blastois = new Pokemon({
   features:{
     name: 'Blastois',
-    // type: 'water',
+    type: 'water',
     color: 'blue',
     canFly: false
   },
