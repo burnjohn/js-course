@@ -3,15 +3,24 @@
  * Try to change it in console
  */
 
+const animals = {
+  Status: 'good',
+  name: 'cat'
+};
 
-Object.defineProperty(animals, 'requestStatus', {
-  enumerable: false,
-  configurable: false,
+Object.defineProperty(animals, 'Status', {
+  configurable: true,
   writable: false,
   value: 'All good',
 });
 
-console.log('Object with destructor: ', animals);
+Object.defineProperty(animals, 'Status', {
+  writable: true
+});
+
+animals.Status = 'All bad';
+
+console.log(animals.Status);
 
 /**
  * Object.freeze usage
